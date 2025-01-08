@@ -390,3 +390,14 @@ nav {
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  .certificate-item {
+    box-shadow: none; /* Remove the glow effect on mobile */
+  }
+
+  /* Optional: You can change the layout for mobile if needed */
+  .certificate-item:hover {
+    box-shadow: none; /* Ensure hover effect doesn't apply on mobile */
+  }
+}
