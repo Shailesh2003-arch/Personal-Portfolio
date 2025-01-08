@@ -385,4 +385,10 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     justify-content: center;
   }
+  .project-item {
+    box-shadow: none;
+  }
+  .project-item:hover {
+    box-shadow: none;
+  }
 }
