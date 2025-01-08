@@ -150,17 +150,23 @@ nav {
 /* work section */
 
 #work {
-  height: 100vh;
-
   color: var(--secondary-color);
 }
 
 #work-container {
-  /* background-color: #555; */
-  /* border: 2px solid red; */
-  height: 100%;
   padding: 1.5rem;
   margin-top: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: repeat(4, auto);
+  gap: 1.5rem;
+  padding: 0.3rem;
+  justify-items: center;
+  margin-top: 2rem;
+  color: var(--secondary-color);
 }
 
 #work-container h4 {
@@ -169,6 +175,96 @@ nav {
   font-size: 18px;
 }
 
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10px; /* Glow width on the left side */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 123, 255, 0.7),
+    rgba(0, 123, 255, 0)
+  );
+  border-radius: 10px 0 0 10px; /* Curved on the left side */
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: scaleY(0); /* Initial collapsed state */
+}
+
+.project-card:hover::before {
+  opacity: 1;
+  transform: scaleY(1); /* Expand vertically */
+}
+
+.project-card:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Styling the project details */
+.project-details {
+  padding: 1rem;
+  position: relative;
+  background: #fff;
+  z-index: 1;
+}
+
+.project-details h4 {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.project-details h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.project-details a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-details a:hover {
+  background-color: #0056b3;
+}
 /* about section */
 
 #about {
@@ -317,13 +413,17 @@ nav {
       auto-fit,
       minmax(100%, 1fr)
     ); /* Single-column layout for phones */
-  }
 
-  .certificate-item {
-    padding: 6px; /* Further reduce padding */
-  }
+    .certificate-item {
+      padding: 6px; /* Further reduce padding */
+    }
 
-  .certificate-item p {
-    font-size: 0.8rem; /* Even smaller font size for phones */
+    .certificate-item p {
+      font-size: 0.8rem; /* Even smaller font size for phones */
+    }
+
+    /* .project-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    } */
   }
 }
