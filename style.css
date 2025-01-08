@@ -422,8 +422,8 @@ nav {
       font-size: 0.8rem; /* Even smaller font size for phones */
     }
 
-    /* .project-grid {
+    .project-grid {
       grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-    } */
+    }
   }
 }
