@@ -164,7 +164,7 @@ nav {
 
 .project-grid {
   display: grid;
-  /* border: 2px solid red; */
+  border: 2px solid red;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: repeat(4, auto);
   gap: 1.5rem;
@@ -383,5 +383,9 @@ nav {
     .certificate-item p {
       font-size: 0.8rem; /* Even smaller font size for phones */
     }
+  }
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    justify-content: center;
   }
 }
