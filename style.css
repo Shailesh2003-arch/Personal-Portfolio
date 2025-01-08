@@ -164,7 +164,6 @@ nav {
 
 .project-grid {
   display: grid;
-  border: 2px solid red;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: repeat(4, auto);
   gap: 1.5rem;
@@ -202,7 +201,7 @@ nav {
 
 .project-description h4 {
   font-size: 0.9rem;
-  color: var(--main-headings);
+  color: #7488d7;
   margin-bottom: 0.5rem;
 }
 
