@@ -181,7 +181,7 @@ nav {
 
 .project-item:hover {
   transform: translateY(-5px);
-  box-shadow: -6px 0 5px rgba(0, 255, 255, 0.7);
+  box-shadow: -6px 0 5px rgba(85, 151, 218, 0.7);
 }
 
 .project-item img {
@@ -222,10 +222,6 @@ nav {
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-}
-
-.project-description a:hover {
-  background-color: #0056b3;
 }
 
 /* about section */
@@ -388,13 +384,5 @@ nav {
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     justify-content: center;
-  }
-  .certificate-item {
-    box-shadow: none; /* Remove the glow effect on mobile */
-  }
-
-  /* Optional: You can change the layout for mobile if needed */
-  .certificate-item:hover {
-    box-shadow: none; /* Ensure hover effect doesn't apply on mobile */
   }
 }
