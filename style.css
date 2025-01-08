@@ -156,7 +156,6 @@ nav {
 #work-container {
   padding: 1.5rem;
   margin-top: 2rem;
-  height: 100vh;
 }
 
 #work-container h4 {
@@ -232,7 +231,7 @@ nav {
 /* about section */
 
 #about {
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 /* certification section */
